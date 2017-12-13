@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="thO-cw-cGB">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller One-->
+        <scene sceneID="OD7-Na-bNa">
+            <objects>
+                <viewController id="thO-cw-cGB" customClass="ViewControllerOne" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vBn-eF-UWM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="sJ5-O3-cLc"/>
+                    </view>
+                    <connections>
+                        <segue destination="4ao-6S-U97" kind="presentation" identifier="loginSegue" id="PgM-dG-0qG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jKU-n7-00l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1300" y="-243.32833583208398"/>
+        </scene>
+        <!--Sign In SuccessVC-->
+        <scene sceneID="7Yy-YX-G98">
+            <objects>
+                <viewController id="4ao-6S-U97" customClass="signInSuccessVC" customModule="WeatherApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ruh-ym-uGF">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOB-Lz-M7v">
+                                <rect key="frame" x="303" y="20" width="56" height="30"/>
+                                <state key="normal" title="SIgnOut"/>
+                                <connections>
+                                    <action selector="btnSignOut:" destination="4ao-6S-U97" eventType="touchUpInside" id="T2B-5C-ijO"/>
+                                    <segue destination="g0Y-Y2-Kha" kind="unwind" unwindAction="exitingUnwindWithSegue:" id="hV0-RR-keb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome," textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xcc-Bv-sZs">
+                                <rect key="frame" x="16" y="16" width="76" height="38"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-uQ-iRt">
+                                <rect key="frame" x="149" y="318" width="62" height="30"/>
+                                <state key="normal" title="Continue"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hzN-IR-4cw">
+                                <rect key="frame" x="16" y="58" width="343" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="4YL-E3-2Rl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hzN-IR-4cw" firstAttribute="top" secondItem="Xcc-Bv-sZs" secondAttribute="bottom" constant="4" id="3uz-Xa-K10"/>
+                            <constraint firstItem="gOB-Lz-M7v" firstAttribute="trailing" secondItem="Ruh-ym-uGF" secondAttribute="trailingMargin" id="Bvc-YT-hvj"/>
+                            <constraint firstItem="Xcc-Bv-sZs" firstAttribute="leading" secondItem="hzN-IR-4cw" secondAttribute="leading" id="Y5P-au-FMI"/>
+                            <constraint firstItem="gOB-Lz-M7v" firstAttribute="trailing" secondItem="hzN-IR-4cw" secondAttribute="trailing" id="YRQ-g1-Ttq"/>
+                            <constraint firstItem="zWw-uQ-iRt" firstAttribute="leading" secondItem="qce-Rh-Wgb" secondAttribute="leading" constant="149" id="Ymy-BL-AHR"/>
+                            <constraint firstItem="hzN-IR-4cw" firstAttribute="top" secondItem="gOB-Lz-M7v" secondAttribute="bottom" constant="8" symbolic="YES" id="fMz-XR-8th"/>
+                            <constraint firstItem="Xcc-Bv-sZs" firstAttribute="centerY" secondItem="gOB-Lz-M7v" secondAttribute="centerY" id="i3u-of-0GE"/>
+                            <constraint firstItem="Xcc-Bv-sZs" firstAttribute="leading" secondItem="Ruh-ym-uGF" secondAttribute="leadingMargin" id="jOs-E2-LCp"/>
+                            <constraint firstItem="gOB-Lz-M7v" firstAttribute="top" secondItem="qce-Rh-Wgb" secondAttribute="top" id="liZ-7k-cUS"/>
+                            <constraint firstItem="zWw-uQ-iRt" firstAttribute="centerY" secondItem="Ruh-ym-uGF" secondAttribute="centerY" id="ogw-zq-xcH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qce-Rh-Wgb"/>
+                    </view>
+                    <connections>
+                        <outlet property="lblUserName" destination="hzN-IR-4cw" id="5Mb-gH-fRa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JAG-Nb-gRg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="g0Y-Y2-Kha" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="-513" y="-243"/>
+        </scene>
+    </scenes>
+</document>
